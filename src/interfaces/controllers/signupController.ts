@@ -7,6 +7,7 @@ export class SignupController{
 
     async handle(request:{email:string; password:string}):Promise<any>{
         try{
+            console.log("signupcontroler")
             const user = await this.signupUseCase.execute(
                 request.email,
                 request.password

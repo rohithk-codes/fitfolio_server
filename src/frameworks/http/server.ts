@@ -9,6 +9,6 @@ export function buildServer(){
   app.use(cors({origin:env.CORS_ORGIN,credentials:true}))
   app.use(express.json());
 
-  app.use("api/auth",authRoutes)
+  app.use("/api/auth",authRoutes)
   return app
 }
